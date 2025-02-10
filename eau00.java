@@ -1,7 +1,5 @@
 // Créez un programme qui affiche toutes les différentes combinaisons possibles de trois chiffres dans l’ordre croissant.
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.LinkedHashSet;
 
 public class eau00
 { 
