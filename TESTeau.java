@@ -1,3 +1,27 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.LinkedHashSet;
+
+public class TESTeau
+{ 
+    public static void main(String[] args)
+    {
+        int iNumber = 121;  //1ere it : iNumber = 12
+        String sNumber = Integer.toString(iNumber);
+        char[] tChNumber = sNumber.toCharArray();
+        
+        for(char ch : tChNumber){
+            System.out.print(ch + " ");
+        }
+        System.out.println();
+
+        // String myStr = "Hello";
+        // char[] myArray = myStr.toCharArray();
+        // System.out.println(myArray[0]);
+    }
+}
+
+/*Tri par ordre Ascii
 public class TESTeau // Tri par ordre Ascii
 { 
     public static void main(String[] args)
@@ -97,5 +121,6 @@ public class TESTeau // Tri par ordre Ascii
         System.out.println();
     }
 }
+ */
         
         
