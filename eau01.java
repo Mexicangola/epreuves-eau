@@ -1,7 +1,4 @@
-/* 
-Créez un programme qui affiche toutes les différentes combinaisons de deux nombre entre 00 et 99 dans l’ordre croissant.
-Exemples d’utilisation : 00 01, 00 02, 00 03, 00 04, ... , 00 99, 01 02, ... , 97 99, 98 99
-*/
+// Créez un programme qui affiche toutes les différentes combinaisons de deux nombre entre 00 et 99 dans l’ordre croissant.
 
 import java.util.ArrayList;
 
@@ -9,6 +6,20 @@ public class eau01
 { 
     public static void main(String[] args) 
     {
+        ArrayList<String> combinations = new ArrayList<>();
+
+        for(int i = 0 ; i <= 99 ; i++){
+            for(int j = i+1 ; j <= 99 ; j++){
+                combinations.add(String.format("%02d %02d", i, j));
+            }
+        }
+
+        System.out.println(combinations);
+        System.out.println(combinations.size());
+    }
+}
+
+/*ROUND ONE
         int[] iTableauChiffres = new int[9999];//ceci est le tableau qui va contenir toutes les chiffres entre 0 et 9999
         int[][] iTableauDouble = new int[iTableauChiffres.length][];//ceci est le tableau de tableaux, [tableau ext][tableau int]
         int iChiffre = 1;
@@ -98,5 +109,4 @@ public class eau01
         }
 
         System.out.println(myArrayListString.size());
-    }
-}
+ */
