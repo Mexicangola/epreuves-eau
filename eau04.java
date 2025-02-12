@@ -1,7 +1,5 @@
 // Créez un programme qui affiche le premier nombre premier supérieur au nombre donné en argument.
 
-import java.util.ArrayList;
-
 public class eau04
 { 
     public static void main(String[] args)
