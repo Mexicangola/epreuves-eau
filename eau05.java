@@ -21,15 +21,13 @@ public class eau05
             if(petitTexte.charAt(0) == grandTexte.charAt(i)){
                 String substringGrandTexte = grandTexte.substring(i, (i + petitTexte.length()));
                 if(substringGrandTexte.equals(petitTexte)){
-                    String message2 = String.format("on trouve dans l'index %d le substring : '%s' du texte '%s'", i , substringGrandTexte, grandTexte);
-                    System.out.println(message2);
+                    System.out.printf("on trouve dans l'index %d le substring : '%s' du texte '%s'%n", i , substringGrandTexte, grandTexte);
                     return;
                 }
             }
         }
 
-        String message3 = String.format("on ne trouve pas le substring '%s' dans le texte '%s'", petitTexte, grandTexte);
-        System.out.println(message3);
+        System.out.printf("on ne trouve pas le substring '%s' dans le texte '%s'%n", petitTexte, grandTexte);
     }
 }
 
