@@ -1,22 +1,29 @@
-import java.util.ArrayList;
+// Créez un programme qui met en majuscule une lettre sur deux d’une chaîne de caractères. Seule les lettres (A-Z, a-z) sont prises en compte.
 
 public class eau06
 { 
     public static void main(String[] args)
     {
+        if(args.length == 0){
+            System.out.println("donne moi un texte, n'importe quoi!!");
+        }
+        
         String message = String.join(" ", args);
 
-        try{
-            Integer iArgs = Integer.parseInt(message);
-            System.out.println(iArgs + " est une chiffre, donne moi des arguents en String!");
-        }
-        catch(Exception e){
-            String[] splitMessage = message.split("");
-            for(int i = 0 ; i < splitMessage.length ; i = i + 2){
-                splitMessage[i] = (splitMessage[i]).toUpperCase();
+        StringBuilder resultat = new StringBuilder();
+
+        for(int i = 0 ; i < message.length() ; i++){
+            char c = message.charAt(i);
+
+            if(Character.isLetter(c)){
+                if(i % 2 == 0){
+                    c = Character.toUpperCase(c);
+                }
             }
-            String message2 = String.join("", splitMessage);
-            System.out.println(message2);
+
+            resultat.append(c);
         }
+
+        System.out.println(resultat.toString());
     }
 }
